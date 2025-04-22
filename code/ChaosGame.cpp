@@ -6,6 +6,7 @@
 #include <vector>
 #include <cstdlib>
 
+//EXTRA CREDIT PORTION COMMENTED OUT
 //Make the code easier to type with "using namespace"
 using namespace sf;
 using namespace std;
@@ -27,6 +28,9 @@ int main()
 
 	Text text;
 	text.setFont(font);
+	
+	//text.setString("Click on 4 points for the square fractal.");
+	
 	text.setString("Click on three points for the vertices.");
 	text.setCharacterSize(24);
 	
