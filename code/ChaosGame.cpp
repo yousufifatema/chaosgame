@@ -32,6 +32,7 @@ int main()
 	
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
+	Vector2f repeat, rv;
 
 	while (window.isOpen())
 	{
@@ -57,6 +58,8 @@ int main()
 			    std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 	
 			    if(vertices.size() < 3)
+			    //if(vertices.size() < 4)
+			    //if you want to run square fractal! uncomment < 4 and comment out < 3
 			    {
 				vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
 			    }
@@ -86,7 +89,15 @@ int main()
 		    ///calculate midpoint between random vertex and the last point in the vector
 		    ///push back the newly generated coord.
 
-		    Vector2f rv = vertices[rand() % vertices.size()];
+		    //EXTRA CREDIT CODE. uncomment
+		    //do {
+			
+		    rv = vertices[rand() % vertices.size()];
+
+		    //extra credit code. uncomment
+		    //} while (repeat == rv);
+		    repeat = rv; 
+			
 		    Vector2f midpoint((rv.x + points[points.size() - 1].x) / 2.0, (rv.y + points[points.size() - 1].y) / 2.0);
 
 		    points.push_back(midpoint); 
