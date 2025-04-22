@@ -58,8 +58,10 @@ int main()
 			    std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 	
 			    if(vertices.size() < 3)
+				    
 			    //if(vertices.size() < 4)
 			    //if you want to run square fractal! uncomment < 4 and comment out < 3
+				    
 			    {
 				vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
 			    }
